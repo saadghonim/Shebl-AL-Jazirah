@@ -1,16 +1,18 @@
 .services {
   display: flex;
   flex-direction: column;
-  .btn_white {
-    min-width: 176px;
-  }
   .group_btn {
     justify-content: start;
   }
 }
 .services_img {
+  overflow: hidden;
   img {
+    transition: 0.9s;
     max-width: 100%;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 .group_services {

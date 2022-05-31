@@ -6,6 +6,11 @@
 .intro_img {
   position: relative;
   overflow: hidden;
+  &::after:hover {
+    img {
+      transform: calc(1.2);
+    }
+  }
   &::after {
     content: "";
     width: 100%;
@@ -23,6 +28,7 @@
   img {
     max-width: 100%;
     max-height: 100%;
+    transition: 1s;
   }
 }
 .intro_content {
@@ -78,11 +84,17 @@
     width: 80%;
     .title_intro {
       font-size: 35px;
+      @include en {
+        font-size: 34px;
+      }
     }
     .paragraph_intro {
       font-size: 20px;
       margin-bottom: 40px;
       line-height: 1.5;
+      @include en {
+        font-size: 18px;
+      }
     }
   }
 }

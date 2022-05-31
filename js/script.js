@@ -72,27 +72,7 @@ $(".clients .owl-carousel").owlCarousel({
 });
 /*~~~~~~~~~~~~~~~~~~end clients~~~~~~~~~~~~~~~~~~~~ */
 //start blog
-$(".news .owl-carousel").owlCarousel({
-  loop: true,
-  autoplay: true,
-  margin: 30,
-  autoplaySpeed: 5000,
-  loop: true,
-  speed: 6000,
-  rtl: $("html").attr("dir") == "rtl" ? true : false,
-  responsive: {
-    0: {
-      items: 1,
-      margin: 15,
-    },
-    600: {
-      items: 2,
-    },
-    1000: {
-      items: 2,
-    },
-  },
-});
+
 if ($(window).width() <= 776) {
   // sub menu
   $(".hover_menu > a").click(function (e) {
@@ -101,38 +81,6 @@ if ($(window).width() <= 776) {
     $(this).parent().find(".ul_menu").slideToggle("500");
   });
 }
-// ~~~~~~~~~~~~~~preload~~~~~~~~~~~~~~
-// document.onreadystatechange = function (e) {
-//   if (document.readyState == "interactive") {
-//     var all = document.getElementsByTagName("*");
-//     for (var i = 0, max = all.length; i < max; i++) {
-//       set_ele(all[i]);
-//     }
-//   }
-// };
-// function check_element(ele) {
-//   var all = document.getElementsByTagName("*");
-//   var totalele = all.length;
-//   var per_inc = 100 / all.length;
-
-//   if ($(ele).on()) {
-//     var prog_width =
-//       per_inc + Number(document.getElementById("progress_width").value);
-//     document.getElementById("progress_width").value = prog_width;
-//     $("#bar1").animate({ width: prog_width + "%" }, 3, function () {
-//       if (document.getElementById("bar1").style.width == "100%") {
-//         $(".progress").fadeOut("slow");
-//         // $(".progress_preload").hide("slow");
-//         $(".progress .bar").fadeOut("slow");
-//       }
-//     });
-//   } else {
-//     set_ele(ele);
-//   }
-// }
-// function set_ele(set_element) {
-//   check_element(set_element);
-// }
 
 // ~~~~~~~~~~~~~~~~~~~~~
 // ~~~~~~~~~~~~~~services

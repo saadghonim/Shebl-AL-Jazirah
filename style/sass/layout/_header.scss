@@ -50,7 +50,7 @@ nav {
   }
   .close_ {
     font-size: 22px;
-    color: $main_color;
+    color: #808080;
     display: none;
     position: absolute;
     top: 20px;
@@ -153,6 +153,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  @include en {
+    font-size: 14px;
+  }
   &:hover {
     color: $color_1;
   }
@@ -163,14 +166,13 @@ nav {
   position: relative;
   overflow: hidden;
   transition-property: color;
-  // transition-duration: 0.5s;
   &::before {
     content: "";
     position: absolute;
     z-index: -1;
     inset: 0px;
     border-radius: 27.5px;
-    background: #ffe367;
+    background: #d7be6f;
     transform: scale(0);
     transition-property: transform;
     transition-duration: 0.5s;
@@ -187,11 +189,18 @@ nav {
   background-color: $color_1;
   z-index: 50;
   transition: 0.5s;
-  padding: 10px 0;
+  padding: 5px 0;
   box-shadow: 0px 0px 5px 0px #0000001a;
   .logo {
     img {
       height: auto;
+      width: 280px;
+    }
+  }
+  .nav_group {
+    .btn_Request {
+      height: 40px;
+      border-radius: 20px;
     }
   }
 }
@@ -221,7 +230,7 @@ nav {
       top: 20px;
       display: block;
       .anc_lang {
-        color: $main_color;
+        color: #808080;
       }
       @include ar {
         right: 20px;
@@ -359,17 +368,14 @@ nav {
 @include lg {
   .logo {
     img {
-      width: 300px;
+      width: 320px;
       transition: 0.5s;
     }
-  }
-  .btn_Request {
-    line-height: 2.2;
   }
   nav {
     z-index: 20;
     @include en {
-      margin-inline-end: 60px;
+      margin-inline-end: 50px;
     }
     .ul_nav {
       > li {
@@ -395,17 +401,15 @@ nav {
     }
   }
   .btn_Request {
-    min-width: 160px;
+    min-width: 170px;
     height: 46px;
     border-radius: 23px;
     font-size: 16px;
   }
   .nav_group {
     .btn_Request {
-      min-width: 160px;
       @include en {
-        min-width: 135px;
-        line-height: 2.8;
+        min-width: 170px;
         font-size: 14px;
       }
       height: 46px;
@@ -422,8 +426,6 @@ nav {
       height: 36px;
       border-radius: 18px;
       font-size: 14px;
-      line-height: 2.1;
-      // margin-inline-start: 20px;
     }
   }
   .logo img {
@@ -434,23 +436,24 @@ nav {
   .fixed_ {
     z-index: 50;
     transition: 0.5s;
-    padding: 8px 0;
-    .lang {
-      .anc_lang {
-        color: $main_color;
-      }
-    }
+    padding: 5px 0;
+    // .lang {
+    //   .anc_lang {
+    //     color: #808080;
+    //   }
+    // }
   }
   .custom_container {
-    .lang {
+    > .lang {
       display: none;
     }
   }
 }
 .fixed_ {
   .lang {
+    margin-bottom: 0px;
     .anc_lang {
-      color: $main_color;
+      color: #808080;
     }
   }
 }
