@@ -434,11 +434,16 @@ nav {
   .fixed_ {
     z-index: 50;
     transition: 0.5s;
-    padding: 5px 0;
+    padding: 8px 0;
     .lang {
       .anc_lang {
         color: $main_color;
       }
+    }
+  }
+  .custom_container {
+    .lang {
+      display: none;
     }
   }
 }

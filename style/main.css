@@ -714,10 +714,13 @@ html[dir="ltr"] .open_menu {
     z-index: 50;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    padding: 5px 0;
+    padding: 8px 0;
   }
   .fixed_ .lang .anc_lang {
     color: #c1a54d;
+  }
+  .custom_container .lang {
+    display: none;
   }
 }
 

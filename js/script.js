@@ -15,7 +15,22 @@ close_.addEventListener("click", function () {
 });
 // ~~~~~~~~~~~~~~~
 /*~~~~~~~~~~~~~~~~~~start clients~~~~~~~~~~~~~~~~~~~~ */
+$(document).ready(function () {
+  // ~~~~~~~~~~~~back_top
+  var btn = $(".back_top");
 
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 100) {
+      btn.addClass("show");
+    } else {
+      btn.removeClass("show");
+    }
+  });
+  btn.on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "500");
+  });
+});
 //~~~~~~~~~ fixed header
 $(window).on("scroll", function () {
   if ($(window).scrollTop() > 150) {
@@ -87,37 +102,37 @@ if ($(window).width() <= 776) {
   });
 }
 // ~~~~~~~~~~~~~~preload~~~~~~~~~~~~~~
-document.onreadystatechange = function (e) {
-  if (document.readyState == "interactive") {
-    var all = document.getElementsByTagName("*");
-    for (var i = 0, max = all.length; i < max; i++) {
-      set_ele(all[i]);
-    }
-  }
-};
-function check_element(ele) {
-  var all = document.getElementsByTagName("*");
-  var totalele = all.length;
-  var per_inc = 100 / all.length;
+// document.onreadystatechange = function (e) {
+//   if (document.readyState == "interactive") {
+//     var all = document.getElementsByTagName("*");
+//     for (var i = 0, max = all.length; i < max; i++) {
+//       set_ele(all[i]);
+//     }
+//   }
+// };
+// function check_element(ele) {
+//   var all = document.getElementsByTagName("*");
+//   var totalele = all.length;
+//   var per_inc = 100 / all.length;
 
-  if ($(ele).on()) {
-    var prog_width =
-      per_inc + Number(document.getElementById("progress_width").value);
-    document.getElementById("progress_width").value = prog_width;
-    $("#bar1").animate({ width: prog_width + "%" }, 3, function () {
-      if (document.getElementById("bar1").style.width == "100%") {
-        $(".progress").fadeOut("slow");
-        // $(".progress_preload").hide("slow");
-        $(".progress .bar").fadeOut("slow");
-      }
-    });
-  } else {
-    set_ele(ele);
-  }
-}
-function set_ele(set_element) {
-  check_element(set_element);
-}
+//   if ($(ele).on()) {
+//     var prog_width =
+//       per_inc + Number(document.getElementById("progress_width").value);
+//     document.getElementById("progress_width").value = prog_width;
+//     $("#bar1").animate({ width: prog_width + "%" }, 3, function () {
+//       if (document.getElementById("bar1").style.width == "100%") {
+//         $(".progress").fadeOut("slow");
+//         // $(".progress_preload").hide("slow");
+//         $(".progress .bar").fadeOut("slow");
+//       }
+//     });
+//   } else {
+//     set_ele(ele);
+//   }
+// }
+// function set_ele(set_element) {
+//   check_element(set_element);
+// }
 
 // ~~~~~~~~~~~~~~~~~~~~~
 // ~~~~~~~~~~~~~~services
@@ -145,21 +160,6 @@ if ($(window).width() <= 992) {
 // ~~~~~~~~~~wow.js
 new WOW().init();
 document.documentElement.style.setProperty("--animate-duration", ".8s");
-
-// ~~~~~~~~~~~~back_top
-var btn = $(".back_top");
-
-$(window).scroll(function () {
-  if ($(window).scrollTop() > 100) {
-    btn.addClass("show");
-  } else {
-    btn.removeClass("show");
-  }
-});
-btn.on("click", function (e) {
-  e.preventDefault();
-  $("html, body").animate({ scrollTop: 0 }, "500");
-});
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~lasy-load~~~~~~~~~~~~~~~~~~~~~~
 // const images = document.querySelector("img");
