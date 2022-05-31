@@ -150,6 +150,9 @@ nav {
   text-align: center;
   line-height: 2.8;
   color: $color_1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:hover {
     color: $color_1;
   }
@@ -280,6 +283,7 @@ nav {
         color: $main_color;
         margin-inline-start: 2px;
         transition: 0.5s;
+        margin-top: 7px;
       }
     }
     .ul_menu {
@@ -392,16 +396,25 @@ nav {
   }
   .btn_Request {
     min-width: 160px;
-    @include en {
-      min-width: 200px;
-      line-height: 2.8;
-      font-size: 15px;
-    }
     height: 46px;
     border-radius: 23px;
     font-size: 16px;
   }
+  .nav_group {
+    .btn_Request {
+      min-width: 160px;
+      @include en {
+        min-width: 135px;
+        line-height: 2.8;
+        font-size: 14px;
+      }
+      height: 46px;
+      border-radius: 23px;
+      font-size: 16px;
+    }
+  }
 }
+
 @include sm {
   .nav_group {
     .btn_Request {

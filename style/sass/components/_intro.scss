@@ -107,6 +107,16 @@
       line-height: 1.5;
     }
   }
+  .intro_section {
+    .group_btn {
+      flex-direction: column;
+      .btn_Request {
+        &:first-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
 
 @include xs {
