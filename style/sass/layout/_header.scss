@@ -13,6 +13,7 @@ header {
   margin-bottom: 10px;
   img {
     margin-inline-start: 2px;
+    margin-bottom: 2px;
   }
   .anc_lang {
     font-size: 12px;
@@ -138,6 +139,11 @@ nav {
 .nav_group {
   display: flex;
   align-items: center;
+  .btn_Request {
+    @include ar {
+      line-height: 2.2;
+    }
+  }
 }
 .btn_Request {
   min-width: 199px;
@@ -156,6 +162,10 @@ nav {
   @include en {
     font-size: 14px;
   }
+  @include ar {
+    align-items: flex-start;
+    line-height: 2.5;
+  }
   &:hover {
     color: $color_1;
   }
@@ -164,24 +174,24 @@ nav {
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   transition-property: color;
   &::before {
     content: "";
     position: absolute;
     z-index: -1;
-    inset: 0px;
+    inset: -2px;
     border-radius: 27.5px;
     background: #d7be6f;
     transform: scale(0);
     transition-property: transform;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     transition-timing-function: ease-out;
   }
 
   &:hover {
     &::before {
-      transform: scale(2);
+      transform: scale(1);
     }
   }
 }
@@ -194,7 +204,9 @@ nav {
   .logo {
     img {
       height: auto;
-      width: 280px;
+      @include min_xs {
+        width: 280px;
+      }
     }
   }
   .nav_group {
@@ -309,6 +321,9 @@ nav {
         a {
           color: #939393;
           text-align: start;
+          &:hover {
+            color: $main_color;
+          }
         }
       }
       &::after {
@@ -329,39 +344,6 @@ nav {
   }
   @include en {
     left: 0;
-  }
-}
-
-.fixed_form {
-  position: fixed;
-  // right: -200%;
-  right: -1000%;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.98);
-  width: 100%;
-  height: 100%;
-  z-index: 111;
-  text-align: center;
-  padding: 60px 30px 40px;
-  transition: 0.5s;
-  form {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    width: calc(100vw - 30px);
-    max-width: 541px;
-    input,
-    select {
-      padding: 0 20px;
-    }
-  }
-  .group_form {
-    position: relative;
-  }
-  .btn_send {
-    width: 100%;
   }
 }
 
@@ -429,10 +411,31 @@ nav {
     }
   }
   .logo img {
-    width: 150px;
+    width: 200px;
+  }
+}
+.nav {
+  .btn_Request {
+    display: none;
   }
 }
 @include xs {
+  .nav_group {
+    .btn_Request {
+      display: none;
+    }
+  }
+  nav {
+    .ul_nav {
+      margin-bottom: 100px;
+    }
+    .btn_Request {
+      display: block !important;
+
+      margin: auto;
+      max-width: 199px;
+    }
+  }
   .fixed_ {
     z-index: 50;
     transition: 0.5s;

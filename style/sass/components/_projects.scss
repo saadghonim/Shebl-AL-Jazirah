@@ -11,19 +11,13 @@
   img {
     transition: 0.5s;
   }
-  &:hover {
-    img {
-      transform: scale(1.1);
-    }
-  }
 }
 .gall_hover {
-  position: absolute;
-  inset: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
   a {
     display: flex;
     justify-content: center;
@@ -33,8 +27,14 @@
     width: 100%;
     height: 100%;
     i {
-      z-index: -1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+      opacity: 0;
       transition: 0.5s;
+      z-index: 4;
     }
 
     &::before {
@@ -47,6 +47,7 @@
       transition: 0.5s;
       bottom: 0;
       right: -100%;
+      z-index: 3;
     }
     &::after {
       content: "";
@@ -58,19 +59,22 @@
       top: 0;
       left: -100%;
       transition: 0.5s;
+      z-index: 3;
     }
     &:hover {
+      text-decoration: none;
+      i {
+        visibility: visible;
+        opacity: 1;
+      }
+      img {
+        transform: scale(1.1);
+      }
       &::after {
         left: 0;
       }
       &::before {
         right: 0;
-      }
-    }
-    &:hover {
-      text-decoration: none;
-      i {
-        z-index: 1;
       }
     }
   }

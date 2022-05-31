@@ -3,6 +3,12 @@ const close_ = document.querySelector(".close_");
 const btn_bars = document.querySelector(".bars_");
 const moboverlay = document.querySelector(".moboverlay");
 const body_ = document.querySelector("body");
+body_.classList.add("over_");
+
+$(window).on("load", function () {
+  $(".preload").fadeOut();
+  body_.classList.remove("over_");
+});
 
 // menu
 btn_bars.addEventListener("click", function () {
@@ -105,25 +111,3 @@ if ($(window).width() <= 992) {
   });
 }
 // ~~~~~~~~~~~~~~~
-// ~~~~~~~~~~wow.js
-new WOW().init();
-document.documentElement.style.setProperty("--animate-duration", ".8s");
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~lasy-load~~~~~~~~~~~~~~~~~~~~~~
-// const images = document.querySelector("img");
-// const lasyLoad = (img) => {
-//   const intobserve = new IntersectionObserver((enteries, observer) => {
-//     enteries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         const image = entry.target;
-//         const source = image.getAttribute("data-lasy");
-//         image.setAttribute("src", source);
-//         image.classList.add("fade-");
-//         observer.disconnect();
-//       }
-//     });
-//   });
-
-//   intobserve.observe(img);
-// };
-// images.forEach(lasyLoad);
