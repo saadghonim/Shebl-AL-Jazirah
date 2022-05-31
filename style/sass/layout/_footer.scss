@@ -242,6 +242,9 @@ footer {
 }
 @include xs {
   footer {
+    .f_btn {
+      font-size: 16px;
+    }
     .ul_social {
       justify-content: flex-start;
       li {
