@@ -1,0 +1,88 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+  margin-bottom: 160px;
+}
+.projects_img {
+  position: relative;
+  overflow: hidden;
+}
+.gall_hover {
+  position: absolute;
+  inset: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color_1;
+    font-size: 48px;
+    width: 100%;
+    height: 100%;
+    i {
+      z-index: -1;
+      transition: 0.5s;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      height: 50%;
+      background-color: $main_color;
+      opacity: 0.9;
+      position: absolute;
+      transition: 0.5s;
+      bottom: 0;
+      right: -100%;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 50%;
+      background-color: $main_color;
+      opacity: 0.9;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      transition: 0.5s;
+    }
+    &:hover {
+      &::after {
+        left: 0;
+      }
+      &::before {
+        right: 0;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+      i {
+        z-index: 1;
+      }
+    }
+  }
+}
+.grid_div {
+  display: grid;
+  gap: 30px;
+}
+
+@include sm {
+  .projects {
+    margin-bottom: 70px;
+
+    @include dots_;
+    .owl-dots {
+      bottom: -30px;
+    }
+  }
+  .projects_img {
+    > img {
+      max-height: 114px;
+    }
+  }
+}

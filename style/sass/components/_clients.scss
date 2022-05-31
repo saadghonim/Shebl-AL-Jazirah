@@ -1,0 +1,62 @@
+.clients_parant {
+  background-color: #f9f9f9;
+  padding: 120px 0;
+  text-align: center;
+  .title_Services {
+    margin-bottom: 40px;
+  }
+  .clients {
+    .owl-dots {
+      bottom: -30px;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .client-img {
+        width: 166px;
+        height: 166px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .anc_clients {
+          display: inline-block;
+          img {
+            max-width: 100%;
+            opacity: 0.5;
+            transition: 0.5s;
+            filter: grayscale(1);
+            &:hover {
+              filter: none;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include sm {
+  .clients_parant {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 60px;
+    .title_Services {
+      margin-bottom: 30px;
+    }
+    .clients {
+      .item {
+        .client-img {
+          width: 130px;
+          height: 130px;
+        }
+      }
+    }
+  }
+}
+@include xs {
+  .clients {
+    @include dots_;
+  }
+}

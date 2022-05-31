@@ -1,0 +1,28 @@
+// abstracts or helpers
+@import "./sass/abstracts/variables";
+@import "./sass/abstracts/functions";
+@import "./sass/abstracts/mixins";
+
+// base
+@import "./sass/base/fonts";
+@import "./sass/base/base";
+@import "./sass/base/button";
+
+// layout
+@import "./sass/layout/header";
+@import "./sass/layout/footer";
+
+// components
+@import "./sass/components/intro";
+@import "./sass/components/about-us";
+@import "./sass/components/services";
+@import "./sass/components/clients";
+@import "./sass/components/projects";
+@import "./sass/components/news";
+
+// button
+@import "./sass/base/button";
+
+.clients_section {
+  overflow: hidden;
+}

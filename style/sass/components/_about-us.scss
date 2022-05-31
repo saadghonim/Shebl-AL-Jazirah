@@ -1,0 +1,78 @@
+.about_us {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+}
+
+.about_img {
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+.about_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+
+  .group_btn {
+    justify-content: flex-start;
+  }
+}
+.content_ {
+  width: 71%;
+}
+.about_title {
+  font-size: 20px;
+  color: #999999;
+  line-height: 1.7;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.title_Services {
+  font-size: 36px;
+  color: $color_2;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+.p_Services {
+  font-size: 20px;
+  color: #333333;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@include sm {
+  .about_us {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 60px;
+  }
+  .about_content {
+    .content_ {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  .about_title {
+    font-size: 18px;
+  }
+  .title_Services {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .p_Services {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
