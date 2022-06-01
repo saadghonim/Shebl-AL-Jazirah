@@ -20,9 +20,8 @@ close_.addEventListener("click", function () {
   body_.classList.remove("over_");
 });
 // ~~~~~~~~~~~~~~~
-/*~~~~~~~~~~~~~~~~~~start clients~~~~~~~~~~~~~~~~~~~~ */
 $(document).ready(function () {
-  // ~~~~~~~~~~~~back_top
+  // ~~~~~~~~~~~~back_top~~~~~~~~~~~~~~~~~~~~~~
   var btn = $(".back_top");
 
   $(window).scroll(function () {
@@ -69,7 +68,7 @@ $(".clients .owl-carousel").owlCarousel({
       margin: 15,
     },
     600: {
-      items: 2,
+      items: 4,
     },
     1000: {
       items: 6,
@@ -105,7 +104,7 @@ if ($(window).width() <= 992) {
         items: 2,
       },
       600: {
-        items: 4,
+        items: 3,
       },
     },
   });

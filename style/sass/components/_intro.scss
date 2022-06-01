@@ -59,6 +59,13 @@
 .group_btn {
   display: flex;
   justify-content: center;
+  .btn_Request {
+    border: 2px solid $main_color;
+    &:hover {
+      border-color: #d7be6f;
+      transition: 0.3s;
+    }
+  }
   .btn_white {
     border: 2px solid #ebebeb;
     background-color: transparent;
@@ -105,10 +112,9 @@
   .intro_section {
     display: flex;
     flex-direction: column;
-    // max-height: 100vh;
   }
   .content_div {
-    padding: 100px 15px 50px;
+    padding: 125px 15px 50px;
     width: 90%;
     .title_intro {
       font-size: 35px;
@@ -124,6 +130,7 @@
       flex-direction: column;
       .btn_Request {
         &:first-child {
+          margin-inline-end: 0px;
           margin-bottom: 10px;
         }
       }
@@ -133,12 +140,9 @@
 
 @include xs {
   .intro_section {
-    img {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 70px;
   }
   .content_div {
-    // padding: 0 15px;
     width: 100%;
     .title_intro {
       font-size: 22px;

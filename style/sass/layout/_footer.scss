@@ -160,7 +160,7 @@ footer {
     }
     .f_div {
       .ul_list {
-        height: auto;
+        // height: auto;
         a {
           margin-inline-start: 15px;
         }
@@ -240,6 +240,11 @@ footer {
     }
   }
 }
+@include lg {
+  .anc_contact {
+    font-size: 26px;
+  }
+}
 @include xs {
   footer {
     .f_btn {
@@ -273,16 +278,16 @@ footer {
     display: flex;
   }
   .icon_ {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
     font-size: 20px;
     margin-inline-end: 15px;
   }
   .anc_contact {
-    font-size: 18px;
+    font-size: 14px;
   }
   .title_contact {
-    font-size: 16px;
+    font-size: 14px;
   }
   .phone {
     margin-bottom: 30px;

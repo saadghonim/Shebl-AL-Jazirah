@@ -58,9 +58,10 @@
   .news {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 40px;
+    gap: 50px;
   }
   .news_section {
+    margin-bottom: 80px;
     .title_Services {
       margin-bottom: 40px;
     }

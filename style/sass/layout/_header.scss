@@ -24,7 +24,15 @@ header {
     }
   }
 }
-
+.logo {
+  a {
+    max-width: 320px;
+    display: inline-block;
+    img {
+      max-width: 100%;
+    }
+  }
+}
 .custom_container {
   padding: 0 70px;
 }
@@ -34,14 +42,14 @@ header {
   justify-content: space-between;
 }
 .bars_ {
-  font-size: 22px;
+  font-size: 24px;
   margin-inline-start: 10px;
   cursor: pointer;
   transition: 0.5s ease-in-out;
-  color: $main_color;
+  color: $color_2;
   display: none;
   &:hover {
-    color: $color_2;
+    color: $main_color;
   }
 }
 nav {
@@ -135,15 +143,21 @@ nav {
       }
     }
   }
+  .btn_Request {
+    display: none;
+  }
+  .hover_menu {
+    position: relative;
+    &:hover {
+      > a {
+        color: $main_color;
+      }
+    }
+  }
 }
 .nav_group {
   display: flex;
   align-items: center;
-  .btn_Request {
-    @include ar {
-      line-height: 2.5;
-    }
-  }
 }
 .btn_Request {
   min-width: 199px;
@@ -152,19 +166,18 @@ nav {
   font-weight: 500;
   border-radius: 27.5px;
   background-color: $main_color;
+  border: 2px solid $main_color;
   display: block;
   text-align: center;
-  line-height: 2.8;
   color: $color_1;
+  line-height: 2.6;
   display: flex;
-  align-items: center;
   justify-content: center;
   @include en {
-    font-size: 14px;
+    line-height: 2.8;
   }
   @include ar {
     align-items: flex-start;
-    line-height: 2.5;
   }
   &:hover {
     color: $color_1;
@@ -174,7 +187,6 @@ nav {
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
   position: relative;
-  // overflow: hidden;
   transition-property: color;
   &::before {
     content: "";
@@ -201,6 +213,14 @@ nav {
   transition: 0.5s;
   padding: 5px 0;
   box-shadow: 0px 0px 5px 0px #0000001a;
+  .hover_menu {
+    position: relative;
+    &:hover {
+      > a {
+        color: $main_color;
+      }
+    }
+  }
   .logo {
     img {
       height: auto;
@@ -213,11 +233,119 @@ nav {
     .btn_Request {
       height: 40px;
       border-radius: 20px;
+      @include en {
+        line-height: 1.9;
+      }
+      @include ar {
+        line-height: 1.9;
+      }
     }
   }
 }
+.nav_group {
+}
+
 .fixsedt {
   top: -130px;
+}
+
+.open_menu {
+  @include ar {
+    right: 0 !important;
+  }
+  @include en {
+    left: 0;
+  }
+}
+
+@include lg {
+  .logo {
+    img {
+      width: 320px;
+      transition: 0.5s;
+    }
+  }
+  nav {
+    z-index: 20;
+    margin-inline-end: 40px;
+    @include en {
+      margin-inline-end: 30px;
+    }
+    .ul_nav {
+      > li {
+        > a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .btn_Request {
+    min-width: 185px;
+    height: 46px;
+    border-radius: 23px;
+    font-size: 16px;
+    @include en {
+      line-height: 2.4;
+    }
+    @include ar {
+      line-height: 2.3;
+    }
+  }
+  .nav_group {
+    .btn_Request {
+      min-width: 170px;
+      @include en {
+        min-width: 170px;
+        font-size: 14px;
+        line-height: 2.8;
+      }
+      @include ar {
+        line-height: 2.2;
+      }
+      height: 46px;
+      border-radius: 23px;
+      font-size: 16px;
+    }
+  }
+  .fixed_ {
+    .nav_group {
+      .btn_Request {
+        height: 40px;
+        border-radius: 20px;
+        @include en {
+          line-height: 2.4;
+        }
+        @include ar {
+          line-height: 1.9;
+        }
+      }
+    }
+  }
+}
+
+@include sm {
+  .nav_group {
+    .btn_Request {
+      min-width: 120px;
+      height: 36px;
+      border-radius: 18px;
+      font-size: 14px;
+    }
+  }
+  .logo img {
+    width: 200px;
+  }
+  .projects_img {
+    .gall_hover {
+      a {
+        max-height: 151px;
+        display: inline-block;
+        img {
+          max-height: 100%;
+        }
+      }
+    }
+  }
 }
 @include xs {
   .bars_ {
@@ -256,7 +384,7 @@ nav {
     height: 100%;
     background-color: $color_1;
     top: 0;
-    padding-top: 100px;
+    padding: 100px 0 50px;
     @include ar {
       right: -100%;
     }
@@ -271,6 +399,7 @@ nav {
         padding: 0;
         a {
           font-size: 18px;
+          color: $color_2;
         }
         &:not(:last-child) {
           margin-inline-end: 0px;
@@ -279,6 +408,15 @@ nav {
       > li {
         width: 100%;
       }
+    }
+    .btn_Request {
+      display: block !important;
+
+      margin: auto;
+      max-width: 199px;
+    }
+    .ul_nav {
+      margin-bottom: 100px;
     }
   }
 
@@ -336,119 +474,31 @@ nav {
       height: auto;
     }
   }
-}
-
-.open_menu {
-  @include ar {
-    right: 0 !important;
-  }
-  @include en {
-    left: 0;
-  }
-}
-
-@include lg {
-  .logo {
-    img {
-      width: 320px;
-      transition: 0.5s;
-    }
-  }
-  nav {
-    z-index: 20;
-    @include en {
-      margin-inline-end: 50px;
-    }
-    .ul_nav {
-      > li {
-        > a {
-          font-size: 18px;
-          color: $main_color;
-          @include en {
-            font-size: 16px;
-          }
-          &:hover {
-            color: $color_2;
-          }
-        }
-      }
-    }
-    .hover_menu {
-      position: relative;
-      &:hover {
-        > a {
-          color: $color_2;
-        }
-      }
-    }
-  }
-  .btn_Request {
-    min-width: 170px;
-    height: 46px;
-    border-radius: 23px;
-    font-size: 16px;
-  }
-  .nav_group {
-    .btn_Request {
-      @include en {
-        min-width: 170px;
-        font-size: 14px;
-      }
-      height: 46px;
-      border-radius: 23px;
-      font-size: 16px;
-    }
-  }
-}
-
-@include sm {
-  .nav_group {
-    .btn_Request {
-      min-width: 120px;
-      height: 36px;
-      border-radius: 18px;
-      font-size: 14px;
-    }
-  }
-  .logo img {
-    width: 200px;
-  }
-}
-nav {
-  .btn_Request {
-    display: none;
-  }
-}
-@include xs {
   .nav_group {
     .btn_Request {
       display: none;
     }
   }
-  nav {
-    .ul_nav {
-      margin-bottom: 100px;
-    }
-    .btn_Request {
-      display: block !important;
 
-      margin: auto;
-      max-width: 199px;
-    }
-  }
   .fixed_ {
     z-index: 50;
     transition: 0.5s;
     padding: 5px 0;
-    // .lang {
-    //   .anc_lang {
-    //     color: #808080;
-    //   }
-    // }
   }
   .custom_container {
     > .lang {
       display: none;
+    }
+  }
+  .projects_img {
+    .gall_hover {
+      a {
+        max-height: 114px;
+        display: inline-block;
+        img {
+          max-height: 100%;
+        }
+      }
     }
   }
 }
@@ -457,6 +507,18 @@ nav {
     margin-bottom: 0px;
     .anc_lang {
       color: #808080;
+    }
+  }
+  nav {
+    .ul_nav {
+      > li {
+        > a {
+          color: $color_2;
+          &:hover {
+            color: $main_color;
+          }
+        }
+      }
     }
   }
 }
