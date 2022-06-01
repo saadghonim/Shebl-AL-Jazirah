@@ -485,7 +485,14 @@ nav {
     z-index: 50;
     transition: 0.5s;
     padding: 10px 0;
+    nav {
+      flex-direction: column;
+      .lang {
+        margin-inline-start: 0;
+      }
+    }
   }
+
   .custom_container {
     > .lang {
       display: none;

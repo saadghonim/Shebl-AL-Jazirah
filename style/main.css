@@ -833,6 +833,16 @@ html[dir="ltr"] .open_menu {
     transition: 0.5s;
     padding: 10px 0;
   }
+  .fixed_ nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .fixed_ nav .lang {
+    -webkit-margin-start: 0;
+            margin-inline-start: 0;
+  }
   .custom_container > .lang {
     display: none;
   }
