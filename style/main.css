@@ -739,7 +739,7 @@ html[dir="ltr"] .open_menu {
   }
 }
 
-.nav .btn_Request {
+nav .btn_Request {
   display: none;
 }
 
