@@ -747,7 +747,7 @@ html[dir="ltr"] .open_menu {
     margin: auto;
   }
   html[dir="ltr"] nav .btn_Request {
-    line-height: 3;
+    line-height: 2.5;
   }
   html[dir="rtl"] nav .btn_Request {
     line-height: 2.8;
