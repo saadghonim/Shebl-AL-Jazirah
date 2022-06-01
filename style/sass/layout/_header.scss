@@ -242,8 +242,6 @@ nav {
     }
   }
 }
-.nav_group {
-}
 
 .fixsedt {
   top: -130px;
@@ -431,15 +429,15 @@ nav {
       justify-content: center;
       &:hover {
         &::after {
-          color: $color_2;
+          color: $main_color;
         }
       }
       &::after {
         content: "";
         font-family: "line Awesome Free";
         font-weight: 900;
-        font-size: 8px;
-        color: $main_color;
+        font-size: 10px;
+        color: $color_2;
         margin-inline-start: 2px;
         transition: 0.5s;
         margin-top: 7px;

@@ -752,14 +752,14 @@ html[dir="ltr"] .open_menu {
             justify-content: center;
   }
   .hover_menu > a:hover::after {
-    color: #192a47;
+    color: #c1a54d;
   }
   .hover_menu > a::after {
     content: "";
     font-family: "line Awesome Free";
     font-weight: 900;
-    font-size: 8px;
-    color: #c1a54d;
+    font-size: 10px;
+    color: #192a47;
     -webkit-margin-start: 2px;
             margin-inline-start: 2px;
     -webkit-transition: 0.5s;
