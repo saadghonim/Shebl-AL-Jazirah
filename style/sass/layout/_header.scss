@@ -375,7 +375,7 @@ nav {
     height: 100%;
     background-color: $color_1;
     top: 0;
-    padding: 100px 0 50px;
+    padding: 100px 15px 50px;
     @include ar {
       right: -100%;
     }
@@ -403,8 +403,12 @@ nav {
     .btn_Request {
       display: block !important;
       margin: auto;
-      line-height: 2.9;
-      width: 90%;
+      @include en {
+        line-height: 3;
+      }
+      @include ar {
+        line-height: 2.8;
+      }
     }
     .ul_nav {
       margin-bottom: 100px;

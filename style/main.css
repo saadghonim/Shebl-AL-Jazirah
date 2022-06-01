@@ -667,7 +667,7 @@ html[dir="ltr"] .open_menu {
     height: 100%;
     background-color: #ffffff;
     top: 0;
-    padding: 100px 0 50px;
+    padding: 100px 15px 50px;
   }
   nav .close_ {
     display: block;
@@ -721,8 +721,12 @@ html[dir="ltr"] .open_menu {
   nav .btn_Request {
     display: block !important;
     margin: auto;
-    line-height: 2.9;
-    width: 90%;
+  }
+  html[dir="ltr"] nav .btn_Request {
+    line-height: 3;
+  }
+  html[dir="rtl"] nav .btn_Request {
+    line-height: 2.8;
   }
   nav .ul_nav {
     margin-bottom: 100px;
