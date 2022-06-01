@@ -4,6 +4,9 @@
   .group_btn {
     justify-content: start;
   }
+  .title_Services {
+    color: $main_color;
+  }
 }
 .services_img {
   overflow: hidden;
@@ -37,7 +40,7 @@
     flex-direction: column;
     .group_services {
       flex-direction: column;
-      margin-bottom: 60px;
+      margin-bottom: 80px;
     }
   }
   .services_img,

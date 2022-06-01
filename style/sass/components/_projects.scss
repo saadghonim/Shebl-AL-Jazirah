@@ -1,3 +1,10 @@
+.projects_section {
+  padding-top: 120px;
+  text-align: center;
+  .title_Services {
+    margin-bottom: 50px;
+  }
+}
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -85,6 +92,10 @@
 }
 
 @include sm {
+  .projects_section {
+    padding-top: 0;
+    margin-bottom: 100px;
+  }
   .projects {
     margin-bottom: 70px;
 

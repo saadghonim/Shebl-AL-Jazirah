@@ -11,6 +11,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 10px;
+  transition: 0.5s;
   img {
     margin-inline-start: 2px;
     margin-bottom: 2px;
@@ -53,9 +54,10 @@ header {
   }
 }
 nav {
-  margin-inline-end: 90px;
+  margin-inline-end: 40px;
   .lang {
     display: none;
+    transition: 0.5s;
   }
   .close_ {
     font-size: 22px;
@@ -81,7 +83,7 @@ nav {
         margin-inline-end: 20px;
       }
       > a {
-        font-size: 18px;
+        font-size: 16px;
         color: $color_1;
         font-weight: 500;
         transition: 0.5s;
@@ -160,21 +162,23 @@ nav {
   align-items: center;
 }
 .btn_Request {
-  min-width: 199px;
-  height: 55px;
+  min-width: 175px;
+  height: 48px;
   font-size: 17px;
   font-weight: 500;
-  border-radius: 27.5px;
+  border-radius: 24px;
   background-color: $main_color;
   border: 2px solid $main_color;
   display: block;
   text-align: center;
+  text-transform: capitalize;
   color: $color_1;
-  line-height: 2.6;
+  line-height: 2.4;
   display: flex;
   justify-content: center;
   @include en {
-    line-height: 2.8;
+    line-height: 2.5;
+    min-width: 190px;
   }
   @include ar {
     align-items: flex-start;
@@ -231,8 +235,6 @@ nav {
   }
   .nav_group {
     .btn_Request {
-      height: 40px;
-      border-radius: 20px;
       @include en {
         line-height: 1.9;
       }
@@ -255,7 +257,24 @@ nav {
     left: 0;
   }
 }
+.fixed_ {
+  .custom_container {
+    > .lang {
+      display: none;
+    }
+  }
 
+  nav {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    .lang {
+      display: block;
+      margin-inline-start: 50px;
+    }
+  }
+}
 @include lg {
   .logo {
     img {
@@ -277,30 +296,9 @@ nav {
       }
     }
   }
-  .btn_Request {
-    min-width: 185px;
-    height: 46px;
-    border-radius: 23px;
-    font-size: 16px;
-    @include en {
-      line-height: 2.4;
-    }
-    @include ar {
-      line-height: 2.3;
-    }
-  }
+
   .nav_group {
     .btn_Request {
-      min-width: 170px;
-      @include en {
-        min-width: 170px;
-        font-size: 14px;
-        line-height: 2.8;
-      }
-      @include ar {
-        line-height: 2.2;
-      }
-      height: 46px;
       border-radius: 23px;
       font-size: 16px;
     }
@@ -310,12 +308,6 @@ nav {
       .btn_Request {
         height: 40px;
         border-radius: 20px;
-        @include en {
-          line-height: 2.4;
-        }
-        @include ar {
-          line-height: 1.9;
-        }
       }
     }
   }
@@ -324,9 +316,6 @@ nav {
 @include sm {
   .nav_group {
     .btn_Request {
-      min-width: 120px;
-      height: 36px;
-      border-radius: 18px;
       font-size: 14px;
     }
   }
@@ -351,6 +340,8 @@ nav {
   }
   .custom_container {
     > .lang {
+      display: none;
+
       .anc_lang {
         display: none;
       }
@@ -360,6 +351,7 @@ nav {
     transition: 0.5s;
     overflow-y: auto;
     text-align: center;
+    display: block;
     .close_ {
       display: block;
     }
@@ -367,6 +359,7 @@ nav {
       position: absolute;
       top: 20px;
       display: block;
+      margin-inline-start: 0px;
       .anc_lang {
         color: #808080;
       }
@@ -409,9 +402,9 @@ nav {
     }
     .btn_Request {
       display: block !important;
-
       margin: auto;
-      max-width: 199px;
+      line-height: 2.9;
+      width: 90%;
     }
     .ul_nav {
       margin-bottom: 100px;
@@ -466,6 +459,11 @@ nav {
         display: none;
       }
     }
+    .fixed_ {
+      .lang {
+        display: none;
+      }
+    }
   }
   header {
     img {
@@ -481,7 +479,7 @@ nav {
   .fixed_ {
     z-index: 50;
     transition: 0.5s;
-    padding: 5px 0;
+    padding: 10px 0;
   }
   .custom_container {
     > .lang {
