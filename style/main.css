@@ -133,55 +133,78 @@ img {
           justify-content: center;
 }
 
-.preload figure {
+.preloader_img {
   position: relative;
   overflow: hidden;
-  display: inline-block;
+  width: 300px;
+  height: 242px;
+}
+
+.filter_ {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.5;
+}
+
+.width_img {
+  position: absolute;
+  inset: 0px;
+  width: 0px;
+  height: 242px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.preloader_ {
+  text-align: center;
+}
+
+.width_img {
+  -webkit-animation: width 5s ease infinite alternate;
+          animation: width 5s ease infinite alternate;
+}
+
+@-webkit-keyframes width {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 300px;
+  }
+}
+
+@keyframes width {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 300px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-  .preload figure img {
-    width: 250px;
+  .preloader_img {
+    width: 200px;
   }
-}
-
-.anim_::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.4)), to(transparent));
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  -webkit-animation: ShineAnim 0.6s ease infinite;
-          animation: ShineAnim 0.6s ease infinite;
-  -webkit-animation-delay: 0.6s infinite;
-          animation-delay: 0.6s infinite;
-}
-
-@-webkit-keyframes ShineAnim {
-  0% {
-    left: -100%;
+  .filter_,
+  .position_img {
+    width: 200px;
   }
-  10% {
-    left: 100%;
+  @-webkit-keyframes width {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 200px;
+    }
   }
-  100% {
-    left: -100%;
-  }
-}
-
-@keyframes ShineAnim {
-  0% {
-    left: -100%;
-  }
-  10% {
-    left: 100%;
-  }
-  100% {
-    left: -100%;
+  @keyframes width {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 200px;
+    }
   }
 }
 
@@ -486,6 +509,7 @@ nav .hover_menu:hover > a {
 html[dir="ltr"] .btn_Request {
   line-height: 2.5;
   min-width: 190px;
+  font-size: 16px;
 }
 
 html[dir="rtl"] .btn_Request {
@@ -1296,7 +1320,7 @@ html[dir="ltr"] footer .newslatter .input_div .btn_newsla {
 }
 
 .content_div .title_intro {
-  font-size: 38px;
+  font-size: 34px;
   color: #283c5e;
   text-align: center;
   font-weight: 700;
@@ -1356,12 +1380,6 @@ html[dir="ltr"] footer .newslatter .input_div .btn_newsla {
   .content_div {
     width: 80%;
   }
-  .content_div .title_intro {
-    font-size: 35px;
-  }
-  html[dir="ltr"] .content_div .title_intro {
-    font-size: 34px;
-  }
   .content_div .paragraph_intro {
     font-size: 20px;
     margin-bottom: 40px;
@@ -1388,9 +1406,6 @@ html[dir="ltr"] footer .newslatter .input_div .btn_newsla {
   .content_div {
     padding: 125px 15px 50px;
     width: 90%;
-  }
-  .content_div .title_intro {
-    font-size: 35px;
   }
   .content_div .paragraph_intro {
     font-size: 20px;

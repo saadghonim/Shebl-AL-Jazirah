@@ -74,44 +74,56 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  figure {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    img {
-      @include xs {
-        width: 250px;
-      }
-    }
-  }
 }
 
-.anim_::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  animation: ShineAnim 0.6s ease infinite;
-  animation-delay: 0.6s infinite;
+.preloader_img {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 242px;
 }
-@keyframes ShineAnim {
+.filter_ {
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+.width_img {
+  position: absolute;
+  inset: 0px;
+  width: 0px;
+  height: 242px;
+  background-color: transparent;
+  overflow: hidden;
+}
+.preloader_ {
+  text-align: center;
+}
+.width_img {
+  animation: width 5s ease infinite alternate;
+}
+
+@keyframes width {
   0% {
-    left: -100%;
-  }
-  10% {
-    left: 100%;
+    width: 0px;
   }
   100% {
-    left: -100%;
+    width: 300px;
+  }
+}
+@include xs {
+  .preloader_img {
+    width: 200px;
+  }
+  .filter_,
+  .position_img {
+    width: 200px;
+  }
+  @keyframes width {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 200px;
+    }
   }
 }
 // back-up

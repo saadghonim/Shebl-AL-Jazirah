@@ -40,7 +40,7 @@
 .content_div {
   width: 76%;
   .title_intro {
-    font-size: 38px;
+    font-size: 34px;
     color: $color_3;
     text-align: center;
     font-weight: 700;
@@ -89,12 +89,6 @@
 @include lg {
   .content_div {
     width: 80%;
-    .title_intro {
-      font-size: 35px;
-      @include en {
-        font-size: 34px;
-      }
-    }
     .paragraph_intro {
       font-size: 20px;
       margin-bottom: 40px;
@@ -116,9 +110,7 @@
   .content_div {
     padding: 125px 15px 50px;
     width: 90%;
-    .title_intro {
-      font-size: 35px;
-    }
+
     .paragraph_intro {
       font-size: 20px;
       margin-bottom: 40px;
