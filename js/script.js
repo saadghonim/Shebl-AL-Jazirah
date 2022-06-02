@@ -1,7 +1,7 @@
-// $(window).on("load", function () {
-//   $(".preload").fadeOut();
-//   body_.classList.remove("over_");
-// });
+$(window).on("load", function () {
+  $(".preload").fadeOut();
+  body_.classList.remove("over_");
+});
 
 const Nav = document.querySelector("nav");
 const close_ = document.querySelector(".close_");
