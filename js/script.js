@@ -1,14 +1,14 @@
+$(window).on("load", function () {
+  $(".preload").fadeOut();
+  body_.classList.remove("over_");
+});
+
 const Nav = document.querySelector("nav");
 const close_ = document.querySelector(".close_");
 const btn_bars = document.querySelector(".bars_");
 const moboverlay = document.querySelector(".moboverlay");
 const body_ = document.querySelector("body");
 body_.classList.add("over_");
-
-$(window).on("load", function () {
-  $(".preload").fadeOut();
-  body_.classList.remove("over_");
-});
 
 // menu
 btn_bars.addEventListener("click", function () {
