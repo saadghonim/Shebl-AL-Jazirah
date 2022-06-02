@@ -162,33 +162,44 @@ img {
 .width_img {
   -webkit-animation: height_ 5s ease infinite;
           animation: height_ 5s ease infinite;
+  height: 0;
+  width: 300px;
+  top: unset;
+}
+
+.position_img {
+  position: absolute;
+  inset: 0;
+  top: unset;
 }
 
 @-webkit-keyframes height_ {
   0% {
-    height: 0;
+    height: 0px;
   }
   100% {
-    height: 100%;
+    height: 242px;
   }
 }
 
 @keyframes height_ {
   0% {
-    height: 0;
+    height: 0px;
   }
   100% {
-    height: 100%;
+    height: 242px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .preloader_img {
     width: 200px;
+    height: 161px;
   }
   .filter_,
   .position_img {
     width: 200px;
+    height: 161px;
   }
   @-webkit-keyframes height_ {
     0% {

@@ -99,24 +99,33 @@ img {
 }
 .width_img {
   animation: height_ 5s ease infinite;
+  height: 0;
+  width: 300px;
+  top: unset;
   // animation-direction: reverse;
 }
-
+.position_img {
+  position: absolute;
+  inset: 0;
+  top: unset;
+}
 @keyframes height_ {
   0% {
-    height: 0;
+    height: 0px;
   }
   100% {
-    height: 100%;
+    height: 242px;
   }
 }
 @include xs {
   .preloader_img {
     width: 200px;
+    height: 161px;
   }
   .filter_,
   .position_img {
     width: 200px;
+    height: 161px;
   }
   @keyframes height_ {
     0% {
