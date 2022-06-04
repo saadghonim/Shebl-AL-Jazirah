@@ -47,7 +47,7 @@
     margin-bottom: 20px;
   }
   .paragraph_intro {
-    font-size: 20px;
+    font-size: 18px;
     color: $color_3;
     line-height: 1.7;
     text-align: center;
@@ -90,7 +90,6 @@
   .content_div {
     width: 80%;
     .paragraph_intro {
-      font-size: 20px;
       margin-bottom: 40px;
       line-height: 1.5;
       @include en {
@@ -112,7 +111,7 @@
     width: 90%;
 
     .paragraph_intro {
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 40px;
       line-height: 1.5;
     }

@@ -130,6 +130,9 @@
       right: 15px;
     }
   }
+  // &[aria-expanded="true"]::after {
+  //   content: "\f106";
+  // }
 }
 @mixin owl-nav_ {
   .owl-nav {

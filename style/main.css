@@ -136,8 +136,7 @@ img {
 .preloader_img {
   position: relative;
   overflow: hidden;
-  width: 300px;
-  height: 242px;
+  width: 150px;
 }
 
 .filter_ {
@@ -149,7 +148,7 @@ img {
 .width_img {
   position: absolute;
   inset: 0px;
-  width: 300px;
+  width: 150px;
   height: 0px;
   background-color: transparent;
   overflow: hidden;
@@ -159,11 +158,15 @@ img {
   text-align: center;
 }
 
+.filter_ {
+  width: 150px;
+}
+
 .width_img {
-  -webkit-animation: height_ 5s ease infinite;
-          animation: height_ 5s ease infinite;
+  -webkit-animation: height_ 4s ease infinite;
+          animation: height_ 4s ease infinite;
   height: 0;
-  width: 300px;
+  width: 150px;
   top: unset;
 }
 
@@ -171,6 +174,7 @@ img {
   position: absolute;
   inset: 0;
   top: unset;
+  width: 150px;
 }
 
 @-webkit-keyframes height_ {
@@ -178,7 +182,7 @@ img {
     height: 0px;
   }
   100% {
-    height: 242px;
+    height: 100%;
   }
 }
 
@@ -187,35 +191,7 @@ img {
     height: 0px;
   }
   100% {
-    height: 242px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .preloader_img {
-    width: 200px;
-    height: 161px;
-  }
-  .filter_,
-  .position_img {
-    width: 200px;
-    height: 161px;
-  }
-  @-webkit-keyframes height_ {
-    0% {
-      height: 0px;
-    }
-    100% {
-      height: 100%;
-    }
-  }
-  @keyframes height_ {
-    0% {
-      height: 0px;
-    }
-    100% {
-      height: 100%;
-    }
+    height: 100%;
   }
 }
 
@@ -519,7 +495,6 @@ nav .hover_menu:hover > a {
 
 html[dir="ltr"] .btn_Request {
   line-height: 2.5;
-  min-width: 190px;
   font-size: 16px;
 }
 
@@ -571,7 +546,7 @@ html[dir="rtl"] .btn_Request {
   z-index: 50;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding: 5px 0;
+  padding: 10px 0;
   -webkit-box-shadow: 0px 0px 5px 0px #0000001a;
           box-shadow: 0px 0px 5px 0px #0000001a;
 }
@@ -595,7 +570,7 @@ html[dir="rtl"] .btn_Request {
 }
 
 html[dir="ltr"] .fixed_ .nav_group .btn_Request {
-  line-height: 1.9;
+  line-height: 2.2;
 }
 
 html[dir="rtl"] .fixed_ .nav_group .btn_Request {
@@ -1349,7 +1324,7 @@ html[dir="ltr"] footer .newslatter .input_div .btn_newsla {
 }
 
 .content_div .paragraph_intro {
-  font-size: 20px;
+  font-size: 18px;
   color: #283c5e;
   line-height: 1.7;
   text-align: center;
@@ -1402,7 +1377,6 @@ html[dir="ltr"] footer .newslatter .input_div .btn_newsla {
     width: 80%;
   }
   .content_div .paragraph_intro {
-    font-size: 20px;
     margin-bottom: 40px;
     line-height: 1.5;
   }
@@ -1429,7 +1403,7 @@ html[dir="ltr"] footer .newslatter .input_div .btn_newsla {
     width: 90%;
   }
   .content_div .paragraph_intro {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 40px;
     line-height: 1.5;
   }
