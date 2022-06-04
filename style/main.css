@@ -1380,9 +1380,6 @@ html[dir="ltr"] footer .newslatter .input_div .btn_newsla {
     margin-bottom: 40px;
     line-height: 1.5;
   }
-  html[dir="ltr"] .content_div .paragraph_intro {
-    font-size: 18px;
-  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -1403,7 +1400,6 @@ html[dir="ltr"] footer .newslatter .input_div .btn_newsla {
     width: 90%;
   }
   .content_div .paragraph_intro {
-    font-size: 18px;
     margin-bottom: 40px;
     line-height: 1.5;
   }

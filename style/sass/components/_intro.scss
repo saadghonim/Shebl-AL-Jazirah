@@ -79,7 +79,6 @@
     &:hover {
       color: $color_1;
       border-color: transparent;
-
       &::before {
         background: $main_color;
       }
@@ -92,9 +91,6 @@
     .paragraph_intro {
       margin-bottom: 40px;
       line-height: 1.5;
-      @include en {
-        font-size: 18px;
-      }
     }
   }
 }
@@ -111,7 +107,6 @@
     width: 90%;
 
     .paragraph_intro {
-      font-size: 18px;
       margin-bottom: 40px;
       line-height: 1.5;
     }
